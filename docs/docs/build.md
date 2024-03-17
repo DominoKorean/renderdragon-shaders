@@ -1,16 +1,15 @@
+::: danger Danger
+This is an unofficial way to make custom shaders.
+There may also be mistakes in this guide.
+If you find one, report it [here](https://github.com/devendrn/renderdragon-shaders/issues). 
+:::
+<br>
+
 # Building shaders
 
 ddf8196's [MaterialBinTool](https://github.com/ddf8196/MaterialBinTool) along with shaderc are the main utilities that let you create custom shaders for RenderDragon.
 This page will show you how to setup, build, and test your custom shader files.
 You will be using a template repository with all the necessary scripts and code to get started. 
-
-::: danger Danger
-
-This is an unofficial way to make custom shaders.
-There may also be mistakes or incorrect information in this guide.
-If you find one, please open an issue [here](https://github.com/devendrn/renderdragon-shaders). 
-
-:::
 
 ## Prerequisites 
 
@@ -30,13 +29,15 @@ git clone https://github.com/devendrn/RenderDragonSourceCodeInv
 ```
 :::
 
-2. Run setup. This will download MaterialBinTool, shaderc, and material json files necessary for compiling shader files.
+2. Go inside directory and run setup. This will download MaterialBinTool, shaderc, and material json files necessary for compiling shader files.
 
 ::: code-group
 ```cmd [Windows]
+cd RenderDragonSourceCodeInv
 .\setup_build_environment.bat
 ```
 ```sh [Linux]
+cd RenderDragonSourceCodeInv
 ./setup.sh
 ```
 :::
@@ -92,7 +93,7 @@ The build script accepts the following arguments:
 To build all shader materials, run:
 ::: code-group
 ```sh [Windows]
-./build.bat
+.\build.bat
 ```
 ```sh [Linux]
 ./build.sh
@@ -102,7 +103,7 @@ To build all shader materials, run:
 To build certain materials for a specific platform, run:
 ::: code-group
 ```sh [Windows]
-./build.bat -m RenderChunk Sky -p Android
+.\build.bat -m RenderChunk Sky -p Android
 ```
 ```sh [Linux]
 ./build.sh -m RenderChunk Sky -p Android
